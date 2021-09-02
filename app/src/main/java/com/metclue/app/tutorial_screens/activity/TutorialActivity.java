@@ -32,8 +32,6 @@ public class TutorialActivity extends AppCompatActivity {
         viewPagerTutorial.setAdapter(viewPagerTutorialAdapter);
         dotsIndicator.setViewPager(viewPagerTutorial);
 //        viewPagerTutorial.setPageTransformer(true, new DefaultTransformer());
-
-
     }
 
 

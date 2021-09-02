@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".tutorial_screens.activity.TutorialActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/viewPagerTutorial"
+        android:layout_weight="0.9"/>
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:id="@+id/dotsIndicator"
+        android:layout_gravity="center_horizontal"
+        app:dotsSize="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        app:dotsColor="#D1D1D1"
+        app:dotsSpacing="@dimen/_5sdp"
+        app:selectedDotColor="#0994B8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.1">
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

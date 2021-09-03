@@ -1,4 +1,4 @@
-package com.metclue.app.tutorial_screens.fragments;
+package com.metclue.app.onboarding_screens.fragments;
 
 import android.os.Bundle;
 

@@ -8,7 +8,7 @@ import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
 import com.metclue.app.R;
-import com.metclue.app.tutorial_screens.activity.TutorialActivity;
+import com.metclue.app.onboarding_screens.activity.OnboardingActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -23,7 +23,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, TutorialActivity.class);
+                Intent intent = new Intent(SplashActivity.this, OnboardingActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
             }

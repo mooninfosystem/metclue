@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tutorial_screens.fragments.TutorialFragment">
+    tools:context=".onboarding_screens.fragments.TutorialFragment">
 
     <ImageView
         android:layout_width="@dimen/_100sdp"

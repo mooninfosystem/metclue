@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MetClue">
-        <activity android:name=".tutorial_screens.activity.TutorialActivity"></activity>
+        <activity android:name=".auth.OTPActivity"></activity>
+        <activity android:name=".auth.LoginActivity" />
+        <activity android:name=".onboarding_screens.activity.OnboardingActivity" />
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

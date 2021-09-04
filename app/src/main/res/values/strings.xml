@@ -13,9 +13,8 @@
     <string name="login_failed">"Login failed"</string>
     <string name="login_screen_text">Tap \'Continue\' to get SMS confirmaton to help \n you use metclue. We would like your phone number.</string>
     <string name="otp_screen_text">Check your SMS message. We have sent you \n the PIN at 918112766303</string>
-    <string name="resend_code_txt">Didn\'t receive SMS? <![CDATA[<b><font color=#FFBB86FC>Resend Code.</font></b>]]></string>
-
-
+    <string name="resend_code_txt">Didn\'t receive SMS? <![CDATA[<b><font color=#000000>Resend Code</font></b>]]></string>
+    <string name="signup_text">Don\'t have an account? <![CDATA[<b><font color=#000000>Sign Up</font></b>]]></string>
 
 
     <string-array name="CountryCodes">

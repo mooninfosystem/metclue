@@ -10,18 +10,26 @@
     android:padding="@dimen/_20sdp"
     tools:context=".auth.LoginActivity">
 
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_back"
+        app:tint="@color/black" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
         android:fontFamily="@font/raleway_bold"
-        android:text="Enter your\nmobile number."
+        android:text="Enter your\ndetails."
         android:textColor="@color/black"
         android:textSize="@dimen/_30sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/textView2"
@@ -35,7 +43,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -71,29 +78,40 @@
             android:layout_weight="0.80"
             android:fontFamily="@font/raleway_medium"
             android:hint="Phone Number"
-            android:imeOptions="actionDone"
+            android:imeOptions="actionNext"
             android:inputType="number"
             android:maxLines="1"
             android:textSize="@dimen/_12sdp" />
 
     </LinearLayout>
 
-
-    <TextView
-        android:id="@+id/tvSignUp"
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
         android:fontFamily="@font/raleway_medium"
-        android:text="@string/signup_text"
-        android:textAlignment="textEnd"
+        android:hint="Name"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:maxLines="1"
         android:textColor="@color/black"
-        android:textSize="@dimen/_10sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:textSize="@dimen/_12sdp" />
+
+    <EditText
+        android:id="@+id/etResidentCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/raleway_medium"
+        android:hint="Resident city"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_40sdp"

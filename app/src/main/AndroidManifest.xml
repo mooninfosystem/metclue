@@ -10,8 +10,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MetClue">
-        <activity android:name=".auth.OTPActivity"></activity>
-        <activity android:name=".auth.LoginActivity" />
+        <activity android:name=".dashboard.CompleteYourProfile"></activity>
+        <activity android:name=".dashboard.DashboardActivity" />
+        <activity
+            android:name=".auth.SignupActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".auth.OTPActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".auth.LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".onboarding_screens.activity.OnboardingActivity" />
         <activity android:name=".splash.SplashActivity">
             <intent-filter>

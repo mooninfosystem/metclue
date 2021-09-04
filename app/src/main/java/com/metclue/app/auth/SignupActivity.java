@@ -4,58 +4,78 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.Html;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.Spinner;
-
-import java.util.Locale;
-
 import android.content.Context;
+import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.metclue.app.R;
 
-public class LoginActivity extends AppCompatActivity {
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
-    TextView tvCountryCode,tvSignUp;
-    Dialog myDialog;
+public class SignupActivity extends AppCompatActivity {
+
+    TextView tvCountryCode;
     String selectedCountryCode = "91";
+    Dialog myDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signup);
+
         tvCountryCode = findViewById(R.id.tvCountryCode);
-        tvSignUp = findViewById(R.id.tvSignUp);
+        findViewById(R.id.ivBack).setOnClickListener(v -> onBackPressed());
+        setCountryCodes();
 
-        String redString = getResources().getString(R.string.signup_text);
-        tvSignUp.setText(Html.fromHtml(redString));
-
-        tvSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,SignupActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
-            }
-        });
-
-        tvCountryCode.setOnClickListener(v -> showDialog());
-
-        findViewById(R.id.btnLogin).setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, OTPActivity.class);
+        findViewById(R.id.btnSignup).setOnClickListener(v -> {
+            Intent intent = new Intent(SignupActivity.this, OTPActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
+//            EditText etResidentCity = findViewById(R.id.etResidentCity);
+//            String value = etResidentCity.getText().toString();
+//            Log.e("value", value);
+//            Geocoder geoCoder = new Geocoder(getBaseContext(), Locale.getDefault());
+//            try {
+//                List<Address> addresses = geoCoder.getFromLocationName(
+//                        value, 5);
+//                if (addresses.size() > 0) {
+//                    for (int i = 0;i<addresses.size();i++){
+//                        Log.e("location ",addresses.get(i).getLocality().toString());
+//                    }
+//                }
+//            } catch (IOException e) {
+//                Log.e("Error ",e.getMessage());
+//            }
+
+
         });
 
+
+
+
+
+
+
+
+    }
+
+    public void setCountryCodes() {
+        tvCountryCode.setOnClickListener(v -> showDialog());
         int flagOffset = 0x1F1E6;
         int asciiOffset = 0x41;
         String country = "IN";
@@ -65,29 +85,17 @@ public class LoginActivity extends AppCompatActivity {
         String flag = new String(Character.toChars(firstChar))
                 + new String(Character.toChars(secondChar));
         tvCountryCode.setText(flag + " 91");
-
     }
-
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-    }
-
 
     private void showDialog() {
 
         myDialog = new Dialog(this);
         myDialog.setCancelable(true);
         myDialog.setContentView(R.layout.choose_country_dialog);
-
         ListView listView;
-
         myDialog.show();
 
         String[] recourseList = this.getResources().getStringArray(R.array.CountryCodes);
-
         listView = myDialog.findViewById(R.id.listView);
         listView.setAdapter(new CountriesListAdapter(this, recourseList));
     }
@@ -137,5 +145,9 @@ public class LoginActivity extends AppCompatActivity {
         return loc.getDisplayCountry().trim();
     }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
 }

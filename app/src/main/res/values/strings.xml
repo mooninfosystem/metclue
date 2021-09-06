@@ -15,6 +15,10 @@
     <string name="otp_screen_text">Check your SMS message. We have sent you \n the PIN at 918112766303</string>
     <string name="resend_code_txt">Didn\'t receive SMS? <![CDATA[<b><font color=#000000>Resend Code</font></b>]]></string>
     <string name="signup_text">Don\'t have an account? <![CDATA[<b><font color=#000000>Sign Up</font></b>]]></string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDlwtj5Qdx7_woRDONXjA0QMiEHwX91ZG4</string>
+
 
 
     <string-array name="CountryCodes">

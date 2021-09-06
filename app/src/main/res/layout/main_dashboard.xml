@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/mainContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+
+    <FrameLayout
+        android:id="@+id/dashboardFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="9.25"/>
+
+    <ImageView
+        android:id="@+id/ivMenu"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:src="@drawable/menu2" />
+
+</RelativeLayout>

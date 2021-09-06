@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dashboard.CompleteYourProfile">
+    tools:context=".completeprofile.CompleteYourProfile">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -17,13 +17,15 @@
         tools:context=".auth.LoginActivity">
 
         <TextView
+            android:id="@+id/tvSkipCompleteProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/raleway_bold"
+            android:paddingVertical="@dimen/_5sdp"
             android:text="skip"
             android:textAlignment="textEnd"
-            android:textColor="@color/black"
-            android:fontFamily="@font/raleway_bold"
-            android:layout_marginTop="@dimen/_30sdp"/>
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/textView"
@@ -51,13 +53,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvUserImage"
             android:layout_width="@dimen/_150sdp"
             android:layout_height="@dimen/_150sdp"
             android:layout_gravity="center_horizontal"
-            app:strokeWidth="1px"
-            app:strokeColor="@color/black"
+            android:layout_marginTop="@dimen/_30sdp"
             app:cardCornerRadius="@dimen/_5sdp"
-            android:layout_marginTop="@dimen/_30sdp">
+            app:strokeColor="@color/black"
+            app:strokeWidth="1px">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -67,20 +70,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="Click to add photo"
                     android:drawableTop="@drawable/ic_plus"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/raleway_regular"/>
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="Click to add photo"
+                    android:textColor="@color/black" />
 
                 <ImageView
+                    android:id="@+id/ivUserPhoto"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/ivUserPhoto"/>
-
+                    android:elevation="@dimen/_5sdp"
+                    android:scaleType="centerCrop" />
 
 
             </RelativeLayout>
-
 
 
         </com.google.android.material.card.MaterialCardView>

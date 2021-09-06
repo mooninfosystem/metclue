@@ -5,14 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
-import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.metclue.app.R;
-import com.metclue.app.dashboard.CompleteYourProfile;
-import com.metclue.app.dashboard.DashboardActivity;
-import com.mukesh.OnOtpCompletionListener;
+import com.metclue.app.completeprofile.CompleteYourProfile;
 import com.mukesh.OtpView;
 
 public class OTPActivity extends AppCompatActivity {

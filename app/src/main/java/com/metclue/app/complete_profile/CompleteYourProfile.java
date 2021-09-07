@@ -1,4 +1,4 @@
-package com.metclue.app.completeprofile;
+package com.metclue.app.complete_profile;
 
 import androidx.appcompat.app.AppCompatActivity;
 

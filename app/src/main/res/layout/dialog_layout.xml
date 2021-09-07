@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/_5sdp">
+
+    <LinearLayout
+        android:padding="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/_50sdp"
+           android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialogTitle"
+            android:textSize="@dimen/_10sdp"
+            android:text="Error"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:fontFamily="@font/raleway_bold"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialogDescription"
+            android:textSize="@dimen/_10sdp"
+            android:text="Please enter valid city name."
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:fontFamily="@font/raleway_regular"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialogButton"
+            android:textSize="@dimen/_10sdp"
+            android:text="ok"
+            android:textColor="@color/black"
+            android:textAlignment="textEnd"
+            android:fontFamily="@font/raleway_regular"
+            android:paddingTop="@dimen/_10sdp"/>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

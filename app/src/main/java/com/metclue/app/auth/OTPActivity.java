@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.metclue.app.R;
-import com.metclue.app.completeprofile.CompleteYourProfile;
+import com.metclue.app.complete_profile.CompleteYourProfile;
 import com.mukesh.OtpView;
 
 public class OTPActivity extends AppCompatActivity {

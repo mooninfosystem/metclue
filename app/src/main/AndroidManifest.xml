@@ -14,19 +14,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MetClue">
-        <activity android:name=".complete_profile.CompleteYourProfile"></activity>
-        <activity android:name=".dashboard.DashboardActivity">
+        <activity android:name=".dashboard.AddNewMetBuddy">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
+        <activity android:name=".complete_profile.CompleteYourProfile" />
+        <activity android:name=".dashboard.DashboardActivity"></activity>
         <activity
             android:name=".auth.SignupActivity"
             android:windowSoftInputMode="adjustResize">
-            <!--                        <intent-filter>-->
-            <!--                            <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                            <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--                        </intent-filter>-->
         </activity>
         <activity
             android:name=".auth.OTPActivity"
@@ -38,6 +37,7 @@
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -46,7 +46,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
     </application>
 
 </manifest>

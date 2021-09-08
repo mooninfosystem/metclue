@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -61,6 +62,13 @@ public class DashboardActivity extends AppCompatActivity {
         MapFragment mapFragment = new MapFragment();
         replaceFragment(mapFragment);
 
+        findViewById(R.id.tvAddNewMetbuddy).setOnClickListener(v -> {
+            drawerLayout.closeDrawer(Gravity.LEFT);
+            Intent intent = new Intent(DashboardActivity.this,AddNewMetBuddy.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+        });
+
     }
 
     @Override
@@ -72,7 +80,6 @@ public class DashboardActivity extends AppCompatActivity {
     public void addFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out);
         fragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out);
         fragmentTransaction.add(R.id.dashboardFrame, fragment);
         fragmentTransaction.addToBackStack(fragment.toString());
@@ -85,7 +92,6 @@ public class DashboardActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out);
         fragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out);
         fragmentTransaction.replace(R.id.dashboardFrame, fragment);
         fragmentTransaction.addToBackStack(fragment.toString());

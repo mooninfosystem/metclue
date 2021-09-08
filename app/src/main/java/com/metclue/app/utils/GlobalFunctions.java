@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.kaopiz.kprogresshud.KProgressHUD;
 import com.metclue.app.R;
@@ -29,6 +30,11 @@ public class GlobalFunctions {
         kProgressHUD.dismiss();
     }
 
+
+    public static void showToastMessage(String message, Context context) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    }
+
     public static String getDeviceID(Context context) {
         @SuppressLint("HardwareIds") String device_id = Settings.Secure.getString(context.getContentResolver(),
                 Settings.Secure.ANDROID_ID);
@@ -46,7 +52,7 @@ public class GlobalFunctions {
         myDialog.setCancelable(true);
         myDialog.setContentView(R.layout.dialog_layout);
 
-        TextView tvDescription,tvTitle,dialogButton;
+        TextView tvDescription, tvTitle, dialogButton;
 
         tvDescription = myDialog.findViewById(R.id.dialogDescription);
         tvTitle = myDialog.findViewById(R.id.dialogTitle);
@@ -59,19 +65,6 @@ public class GlobalFunctions {
         myDialog.show();
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

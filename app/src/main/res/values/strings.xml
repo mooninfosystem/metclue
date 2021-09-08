@@ -20,7 +20,6 @@
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDlwtj5Qdx7_woRDONXjA0QMiEHwX91ZG4</string>
 
 
-
     <string-array name="CountryCodes">
         <item>93,AF</item>
         <item>355,AL</item>
